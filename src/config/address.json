@@ -1,0 +1,14 @@
+{
+    "mainnet": {
+        "router": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+        "pair": "0xe83997D3Ab561f2B6B65FdF83135B638404660bD",
+        "wbnb": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+        "spu": "0x9a026404a460DA62f017f440e6f83A83C1368205"
+    },
+    "testnet": {
+        "router": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
+        "pair": "0xeC764C0122A2C79479ceBD23dBDB5996c8475FF3",
+        "wbnb": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+        "spu": "0x8ECA65145BfAa8F9BD5832AD03fF28F2102d917A"
+    }
+}
