@@ -8,7 +8,7 @@ import routerABI from "../abi/router.json";
 import tokenABI from "../abi/token.json";
 
 import { TradeType, NETWORK } from "../lib/constants";
-import CONFIG from "./config";
+import CONFIG from "../config/config";
 
 const provider = new ethers.JsonRpcProvider(`https://bsc-${process.env.NETWORK}.infura.io/v3/${process.env.INFURA_KEY}`);
 

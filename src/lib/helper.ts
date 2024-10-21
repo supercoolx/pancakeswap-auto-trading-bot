@@ -1,4 +1,4 @@
-import CONFIG from "../lib/config";
+import CONFIG from "../config/config";
 
 export const generateRandomBNBAmount = () => {
     const randomValue = Math.random() * (CONFIG.BNB_MAX_AMOUNT - CONFIG.BNB_MIN_AMOUNT) + CONFIG.BNB_MIN_AMOUNT;

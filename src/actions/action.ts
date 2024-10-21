@@ -1,6 +1,6 @@
 import { Context } from "telegraf";
 import { startBuyTrade, startSellTrade } from "../lib/trade";
-import CONFIG from "../lib/config";
+import CONFIG from "../config/config";
 import { generateRandomBNBAmount, generateRandomTokenAmount } from "../lib/helper";
 
 var tradingIntervalId: NodeJS.Timeout | null = null;
