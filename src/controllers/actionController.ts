@@ -29,7 +29,7 @@ export const startAction = async (ctx: Context) => {
     tradingFunction(ctx, wallets);
     tradingIntervalId = setInterval(() => {
         const randomDelay = Math.floor(Math.random() * CONFIG.TRADE_INTERVAL);
-        setTimeout(tradingFunction, randomDelay, ctx);
+        setTimeout(() => tradingFunction(ctx, wallets), randomDelay);
     }, CONFIG.TRADE_INTERVAL);
 }
 

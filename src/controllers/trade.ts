@@ -191,7 +191,7 @@ export const startBuyTrade = async (ctx: Context, wallet: ethers.Wallet) => {
         });            
         await tx.wait();
 
-        ctx.reply('--------------------- End Buy ---------------------');
+        log(ctx, '--------------------- End Buy ---------------------');
     } catch (err) {
         if (err instanceof Error) ctx.reply(err.message);
         console.error(err);
