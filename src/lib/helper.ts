@@ -1,10 +1,12 @@
-import CONFIG from "../config/config";
+import { Context } from "telegraf";
 
-export const generateRandomBNBAmount = () => {
-    const randomValue = Math.random() * (CONFIG.BNB_MAX_AMOUNT - CONFIG.BNB_MIN_AMOUNT) + CONFIG.BNB_MIN_AMOUNT;
-    return parseFloat(randomValue.toFixed(3));
+export const generateRandomValue = (min: number, max: number, fixed = 0) => {
+    const randomValue = Math.random() * (max - min) + min;
+    return parseFloat(randomValue.toFixed(fixed));
 }
 
-export const generateRandomTokenAmount = () => {
-    return Math.floor(Math.random() * (CONFIG.TOKEN_MAX_AMOUNT - CONFIG.TOKEN_MIN_AMOUNT) + CONFIG.TOKEN_MIN_AMOUNT);
+export const log = async (ctx: Context, ...texts: string[]) => {
+    console.log(...texts);
+    const promises = texts.map(text => ctx.reply(text));
+    return Promise.all(promises);
 }
